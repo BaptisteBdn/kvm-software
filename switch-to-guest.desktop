@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Switch to Guest
+Comment=Switch to Guest
+Type=Application
+Exec=/home/your-name/bin/switch-to-guest.sh
+Terminal=false
+Categories=System;

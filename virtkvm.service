@@ -1,0 +1,19 @@
+[Unit]
+Description=VirtKVM API daemon
+ 
+[Service]
+Type=simple
+ 
+User=your-user
+Group=your-user
+UMask=007
+ 
+ExecStart=/home/your-user/.local/bin/virtkvm --config /home/your-user/.local/conf/virtkvm/config.yaml
+ 
+Restart=on-failure
+ 
+# Configures the time to wait before service is stopped forcefully.
+TimeoutStopSec=300
+ 
+[Install]
+WantedBy=multi-user.target
