@@ -130,6 +130,38 @@ You can now change the values of the config.yaml file with your own:
 
 Example : 
 ```
+kvm:
+  usesudo: false
+  checkguest: true
+libvirt:
+  uri: "qemu:///system"
+  domain: "win10"
+http:
+  address: "192.168.1.15:5001"
+  security:
+    enabled: true
+    secret: "xxxxxxxxx"
+devices:
+  # keyboard
+  - vendor: 0x28da
+    product: 0x1101
+  # mouse
+  - vendor: 0x046d
+    product: 0xc08d
+  # xbox controller
+  - vendor: 0x045e
+    product: 0x028e
+displays:
+  # main display
+  - bus: 3
+    feature: 0x60
+    host: 15
+    guest: 17
+commands:
+  guest:
+    - echo switch to guest
+  host:
+    - echo switch to host
 ```
 
 Try it :
